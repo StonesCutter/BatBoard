@@ -1,0 +1,12 @@
+.divRedCoin {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divCoin {
+    width: 50%;
+}

@@ -1,0 +1,48 @@
+.scoreCardDefault, .scoreCardRow {
+    height: 250px;
+    width: 500px;
+    
+    background-color: #040404;
+    background-image: linear-gradient(#040404, #c498cc);
+    background-size: 100%;
+    background-repeat: repeat;
+    border-radius: 25px;
+    
+    animation: scoreCardDefaultAnim 2s linear 0s infinite normal both;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: #c0c0c0;
+}
+
+@keyframes scoreCardDefaultAnim {
+	0%,
+    50%,
+    100% {
+		animation-timing-function: ease-in-out;
+		transform: translateY(-15px);
+	}
+
+	25%,
+	75% {
+		animation-timing-function: ease-in-out;
+		transform: translateY(0px);
+	}
+}
+
+.scoreCardRow {
+    flex-direction: row;
+}
+
+.scoreCardScore {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.ScoreCardName {
+    display: flex;
+}

@@ -1,0 +1,66 @@
+.parallaxBG {
+    width: 900px;
+    max-width: 900px;
+    height: 100vh;
+    position: relative;
+    background-image: url("../../../assets/images/layerParallax7.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+.parallaxM0 {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    background-image: url("../../../assets/images/layerParallax6.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation-name: movement;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: -50s;
+}
+
+.parallaxM1 {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    background-image: url("../../../assets/images/layerParallax5.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation-name: movement;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: -25s;
+}
+
+.parallaxM2 {
+    width: 100%;
+    height: 80%;
+    margin-top: 20%;
+    position: absolute;
+    background-image: url("../../../assets/images/layerParallax2.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: -5s;
+}
+
+@keyframes movement {
+    from {
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-x: -5000px;
+    }
+}

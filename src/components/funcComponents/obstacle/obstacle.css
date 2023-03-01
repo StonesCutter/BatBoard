@@ -1,0 +1,6 @@
+.divObstacle {
+    position: absolute;
+    left: 70%;
+    width: 50px;
+    background-color: orange;
+}

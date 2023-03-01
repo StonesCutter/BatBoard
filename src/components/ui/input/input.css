@@ -1,0 +1,63 @@
+.defaultInput {
+    background-color: white;
+}
+
+.defaultText {
+    height: 18px;
+    width: 150px;
+    min-width: 85px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-image: linear-gradient(45deg, #040404, #c498cc) 1;
+    border-width: 2px;
+    outline: solid transparent;
+    color: #c0c0c0;
+}
+
+::placeholder {
+    color: #c0c0c0;
+  }
+
+.defaultText:hover {
+    border-image: linear-gradient(45deg, #c498cc, #040404) 1;
+}
+
+.defaultText:focus {
+    border-image: linear-gradient(45deg, #c498cc, #040404) 1;
+}
+
+.defaultButton {
+    height: 28px;
+    width: 150px;
+    min-width: 85px;
+    background-color: #040404;
+    background-image: linear-gradient(#040404, #c498cc);
+    background-size: 100%;
+    background-repeat: repeat;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c0c0c0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.defaultButton:hover{
+    background-color: #040404;
+    background-image: linear-gradient(#c498cc, #040404);
+    cursor: pointer;
+}
+
+.defaultButton:focus{
+    background-color: #040404;
+    background-image: linear-gradient(#040404, #c498cc);
+    cursor: pointer;
+}
