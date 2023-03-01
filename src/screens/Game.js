@@ -6,6 +6,7 @@ import {
   pushToObjList,
   removePassedObjects,
   checkCollision,
+  checkScore,
 } from "../utils/gameMechanicsUtils";
 import Character from "../components/funcComponents/character/Character";
 
@@ -19,6 +20,8 @@ class Game extends Component {
     this.currentTop = 50;
     this.isFalling = false;
     this.pushUp = null;
+    this.obsListAndScores = null;
+    this.scoreCount = 0;
 
     this.obsList = [{}];
     this.gameOver = false;
@@ -34,6 +37,7 @@ class Game extends Component {
 
   componentDidUpdate() {
     this.coordinates = this.charRef.current.getButtonCoords();
+    //console.log("score count:", this.scoreCount);
 
     if (!this.gameOver) {
       this.gameOver = checkCollision(
@@ -51,6 +55,11 @@ class Game extends Component {
       this.obsList = removePassedObjects(this.obsList);
       moveObj(this.obsList, 2);
       pushToObjList(this.obsList, this.state.timePassed, 20, "obstacle");
+
+      this.obsListAndScores = checkScore(this.obsList, this.scoreCount);
+      //console.log("obsListAndScores", this.obsListAndScores);
+      this.obsList = this.obsListAndScores.objList;
+      this.scoreCount = this.obsListAndScores.scoreCount;
     }
   }
 
@@ -111,12 +120,14 @@ class Game extends Component {
     return (
       <div className="homePosition" onClick={this.goUp}>
         <button onClick={this.startFall}>Start</button>
+        Scores are: {this.scoreCount}
         {/*<div className="charPosition">*/}
         <Character distanceTop={this.state.top} ref={this.charRef} />
         {/*{showItems(this.obsList)}*/}
         {/*<Obstacle />*/}
         {/*</div>*/}
         {renderItems(this.obsList, "obstacle")}
+        {renderItems(this.coinsList, "coin")}
       </div>
     );
   }

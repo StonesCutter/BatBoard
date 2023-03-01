@@ -3,10 +3,16 @@ import Spritesheet from "react-responsive-spritesheet";
 import "./coin.css";
 import coin from "../../../assets/images/coin.png";
 
-function Coin() {
-
+function Coin(props) {
   return (
-    <div className="divRedCoin">
+    <div
+      className="divRedCoin"
+      style={{
+        left: `${props.customPosition}%`,
+        top: `${props.customTop}%`,
+        transition: "0.3s linear",
+      }}
+    >
       <Spritesheet
         className={"divCoin"}
         image={coin}
