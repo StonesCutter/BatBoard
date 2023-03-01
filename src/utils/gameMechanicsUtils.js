@@ -42,7 +42,7 @@ function generateNewObs(height, position, top) {
 }
 
 function generateHeightObs() {
-  return Math.floor(Math.random() * 50) + 20;
+  return Math.floor(Math.random() * 30) + 20;
 }
 
 function generateYPositionObj(height, type) {

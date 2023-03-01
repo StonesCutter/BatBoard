@@ -9,7 +9,6 @@ import {
 } from "../utils/gameMechanicsUtils";
 import Character from "../components/funcComponents/character/Character";
 
-
 class Game extends Component {
   constructor(props) {
     super(props);
@@ -41,8 +40,8 @@ class Game extends Component {
       "obstacle",
       this.coordinates.left,
       this.coordinates.top,
-      50,
-      50
+      30,
+      30
     );
 
     this.isGameOver();
@@ -97,25 +96,20 @@ class Game extends Component {
     this.interval = setInterval(this.goDown, 50);
   };
 
-  /* ------- OBSTACLE FUNCTIONS  ------ */
-
   componentWillUnmount() {
     clearInterval(this.timer);
   }
 
   render() {
     return (
-      <div style={{ position: "absolute", height: "100vh", width: "100vw" }}>
+      <div className="homePosition" onClick={this.goUp}>
         <button onClick={this.startFall}>Start</button>
-        <div
-          onClick={this.goUp}
-          style={{ border: "solid", borderColor: "red", height: "100%" }}
-        >
-          <Character distanceTop={this.state.top} ref={this.charRef} />
-          {/*{showItems(this.obsList)}*/}
-          {renderItems(this.obsList, "obstacle")}
-          {/*<Obstacle />*/}
-        </div>
+        {/*<div className="charPosition">*/}
+        <Character distanceTop={this.state.top} ref={this.charRef} />
+        {/*{showItems(this.obsList)}*/}
+        {/*<Obstacle />*/}
+        {/*</div>*/}
+        {renderItems(this.obsList, "obstacle")}
       </div>
     );
   }
