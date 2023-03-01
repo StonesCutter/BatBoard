@@ -4,11 +4,6 @@ import Spritesheet from "react-responsive-spritesheet";
 import "./character.css";
 import bat from "../../../assets/images/bat.png";
 
-//import { React, useRef, useEffect, forwardRef } from "react";
-//import PropTypes from "prop-types";
-//import Spritesheet from "react-responsive-spritesheet";
-//import "./character.css";
-
 const Character = forwardRef((props, ref) => {
   let charRef = useRef(null);
 
@@ -53,24 +48,6 @@ const Character = forwardRef((props, ref) => {
     </div>
   );
 });
-
-/*
-  return (
-    <div className="divRed">
-      <Spritesheet
-        className={"divCharacter"}
-        image={bat}
-        widthFrame={500}
-        heightFrame={500}
-        steps={6}
-        fps={8}
-        autoplay={true}
-        loop={true}
-        timeout={true}
-      />
-    </div>
-  );
-}*/
 
 export default Character;
 

@@ -5,13 +5,9 @@ const Obstacle = forwardRef((props, ref) => {
   let obsRef = useRef(null);
   let obsHeight = null;
 
-  function callback(e) {
+  /*function callback(e) {
     props.callbackInput(e);
-  }
-
-  function randomHeight() {
-    return Math.floor(Math.random() * 70) + 20;
-  }
+  }*/
 
   useEffect(() => {
     if (ref) {
