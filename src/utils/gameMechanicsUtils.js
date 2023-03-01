@@ -71,6 +71,8 @@ function checkCollision(
     //let collidablePosX = (charLeft * 100) / window.innerWidth;
     let collidablePosY = (charTop * 100) / window.innerHeight;
     let hasCollided = false;
+
+    //console.log("coord Y: ", charTop, "collidablePosY: ", collidablePosY);
     if (
       collidablePosY <= collidableHeight ||
       collidablePosY >= 100 - collidableHeight
@@ -87,10 +89,21 @@ function checkCollision(
     filteredList.map(function (item) {
       {
         if (type === "obstacle") {
+          console.log(
+            "[",
+            item.top,
+            "] :",
+            100 - item.height,
+            "<=",
+            Math.round(collidablePosY),
+            "+",
+            Math.round(collidableHeight)
+          );
           if (
             (item.top === 0 &&
               item.height >= collidablePosY - collidableHeight) ||
-            (item.top !== 0 && item.top <= collidablePosY + collidableHeight)
+            (item.top !== 0 &&
+              100 - item.height <= collidablePosY + collidableHeight + 20)
           ) {
             console.log("Ha colliso!!");
             //return true;

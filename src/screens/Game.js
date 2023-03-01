@@ -35,20 +35,23 @@ class Game extends Component {
   componentDidUpdate() {
     this.coordinates = this.charRef.current.getButtonCoords();
 
-    this.gameOver = checkCollision(
-      this.obsList,
-      "obstacle",
-      this.coordinates.left,
-      this.coordinates.top,
-      30,
-      30
-    );
+    if (!this.gameOver) {
+      this.gameOver = checkCollision(
+        this.obsList,
+        "obstacle",
+        this.coordinates.left,
+        this.coordinates.top,
+        30,
+        30
+      );
+    }
 
     this.isGameOver();
-
-    this.obsList = removePassedObjects(this.obsList);
-    moveObj(this.obsList, 2);
-    pushToObjList(this.obsList, this.state.timePassed, 20, "obstacle");
+    if (!this.gameOver) {
+      this.obsList = removePassedObjects(this.obsList);
+      moveObj(this.obsList, 2);
+      pushToObjList(this.obsList, this.state.timePassed, 20, "obstacle");
+    }
   }
 
   /* ------- CHARACTER FUNCTIONS  ------ */
@@ -68,7 +71,11 @@ class Game extends Component {
 
     if (this.isFalling) {
       this.currentTop = parseInt(this.state.top);
-      this.currentTop += 5 + this.pushUp;
+      if (this.currentTop < 100) {
+        this.currentTop += 5 + this.pushUp;
+      } else {
+        this.gameOver = true;
+      }
       this.pushUp = 0;
       /*if (currentTop > 45) {
         clearInterval(this.timer);
