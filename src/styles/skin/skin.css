@@ -1,0 +1,59 @@
+.skinMain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.charPos {
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    height: 20%;
+}
+
+.skinInput {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skinRowTitle {
+    position: absolute;
+    margin-top: 10%;
+    width: 75%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skinRowRadio {
+    position: absolute;
+    margin-top: 25%;
+    width: 75%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skinColButton {
+    position: absolute;
+    margin-top: 45%;
+    width: 75%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
