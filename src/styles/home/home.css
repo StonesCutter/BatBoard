@@ -10,9 +10,9 @@
 
 .homeFirst {
     position: absolute;
-    top: 5%;
+    top: 0%;
     width: 80%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,11 +21,20 @@
 
 .homeSecond {
     position: absolute;
-    top: 75%;
+    top: 70%;
     width: 70%;
     height: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;   
+}
+
+.posChar {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

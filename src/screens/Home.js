@@ -28,6 +28,7 @@ function Home() {
   soundBase.stop();
 
   function readName(e) {
+    soundClick.play();
     name=e.target.value;
   };
 
@@ -64,7 +65,9 @@ function Home() {
               classNameGamePhrase={"titleDefault"}
               h1GamePhrase={"BatBoard"}
             />
-          <Character />
+          <Character 
+            classNameChar1={"posChar"}
+          />
           <Input
             cssStyleInput={"defaultText"}
             typeInput={"text"}

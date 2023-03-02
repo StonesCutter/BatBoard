@@ -30,7 +30,7 @@ const Character = forwardRef((props, ref) => {
       className={"divRed"}
       ref={charRef}
       style={{
-        transform: `translateY(${props.distanceTop}vh)`,
+        transform: translateY(${props.distanceTop}vh),
         transition: "0.3s ease-in",
       }}
     >

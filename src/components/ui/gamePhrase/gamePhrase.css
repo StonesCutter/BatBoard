@@ -9,6 +9,18 @@
     font-family: 'Climate Crisis', cursive;
 }
 
+.titleSkin{
+    background-color: #040404;
+    background-image: linear-gradient(#040404, #c498cc);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: titleDefaultAnim 2s linear 0s infinite normal both;
+    font-family: 'Climate Crisis', cursive;
+    font-size: calc(24px + (38 - 24) * ((100vw - 768px) / (1600 - 768))); 
+}
+
 @keyframes titleDefaultAnim {
 	0%,
     50%,
