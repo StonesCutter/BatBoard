@@ -8,6 +8,7 @@ import {
   checkCollision,
   checkScore,
 } from "../utils/gameMechanicsUtils";
+import { getLocalStorage, setLocalStorage } from "../utils/localStorageUtils";
 import Character from "../components/funcComponents/character/Character";
 
 class Game extends Component {
@@ -61,6 +62,8 @@ class Game extends Component {
       this.obsList = this.obsListAndScores.objList;
       this.scoreCount = this.obsListAndScores.scoreCount;
     }
+
+    this.showGameOver(this.gameOver, this.currentTop);
   }
 
   /* ------- CHARACTER FUNCTIONS  ------ */
@@ -111,6 +114,12 @@ class Game extends Component {
     this.isFalling = true;
     this.interval = setInterval(this.goDown, 50);
   };
+
+  showGameOver(gameOver) {
+    if (gameOver) {
+      console.log("GAME OVER, BITCH!");
+    }
+  }
 
   componentWillUnmount() {
     clearInterval(this.timer);
